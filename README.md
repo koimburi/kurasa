@@ -1,59 +1,67 @@
-# Kurasa
+# Kurasa 📱 - Phonebook Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Kurasa is a user-friendly and feature-rich phonebook application built using Angular and styled with Tailwind CSS. This app helps users manage their contacts in an organized way with a range of features, including contact management, search, and customizable views. The app supports both light and dark modes and allows users to perform bulk actions like deleting or editing contacts.
 
-## Development server
+## Features 🌟
 
-To start a local development server, run:
+### Core Features:
+1. **List All Contacts** 📋:
+   - Display all contacts sorted alphabetically by default.
+   - Toggle between grid view and list view for a flexible user interface.
 
-```bash
-ng serve
-```
+2. **View a Single Contact** 👤:
+   - Click on a contact to view detailed information in a modal or dedicated page.
+   - Fields include First Name, Last Name, Email, Phone Number, Contact Image, Physical Address, and more.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+3. **Edit and Update a Contact** ✏️:
+   - Edit a contact's details, with inline form validation (e.g., email format, phone number length).
+   - Save updated contact information.
 
-## Code scaffolding
+4. **Delete a Contact** 🗑️:
+   - Delete contacts with a confirmation dialog.
+   - "Soft delete" functionality (mark contact as deleted without permanent removal).
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+5. **Search Contacts** 🔍:
+   - Filter contacts dynamically based on the user's input (search by name, email, or phone number).
 
-```bash
-ng generate component component-name
-```
+6. **Bulk Deletion of Contacts** ⚡:
+   - Select multiple contacts using checkboxes and delete them in bulk.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+7. **Homepage Toggle (List or Grid)** 🏠:
+   - Set the default view (list or grid) for the homepage.
+   - Save the user's preference in local storage for persistence.
 
-```bash
-ng generate --help
-```
+### Enhanced Features (Optional but Recommended):
+1. **Contact Grouping** 📂:
+   - Group contacts into categories such as Family, Friends, Work, etc.
+   - Filter contacts by group.
 
-## Building
+2. **Favorites** ⭐:
+   - Mark contacts as favorites and display them in a separate "Favorites" section.
+   - Toggle favorite status with a star icon.
 
-To build the project run:
+3. **Import/Export Contacts** 💾:
+   - Import contacts from a CSV file or export the contact list for backup.
+   - Provides sample CSV templates for users.
 
-```bash
-ng build
-```
+4. **Dark Mode** 🌙:
+   - Switch between light and dark modes using Tailwind's dark mode configuration.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+5. **Recent Contacts** 🕒:
+   - View recently added or viewed contacts in a dedicated section.
 
-## Running unit tests
+## Technology Stack 💻
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- **Frontend**: Angular
+- **Styling**: Tailwind CSS
+- **Data Storage**: [Mock data / Firebase / Postgres / MySQL] (choose based on your preference)
+- **Local Storage**: For saving user preferences (e.g., homepage view, dark mode).
 
-```bash
-ng test
-```
+## Setup Instructions ⚙️
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/kurasa.git
+   cd kurasa
+   npm install
+   ng serve
