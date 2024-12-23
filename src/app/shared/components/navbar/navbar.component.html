@@ -1,0 +1,106 @@
+<div class="flex flex-wrap gap-4 justify-between items-center mb-6">
+  <!-- Search Bar -->
+  <div class="flex-1">
+    <ng-content select="[searchBar]"></ng-content>
+  </div>
+
+  <div class="flex gap-2">
+    <!-- View Toggle -->
+    <button
+      (click)="onToggleView()"
+      class="btn btn-ghost text-gray-700 dark:text-white"
+      [attr.aria-label]="
+        isGridView ? 'Switch to list view' : 'Switch to grid view'
+      "
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        [class.hidden]="!isGridView"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="{2}"
+          d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        [class.hidden]="isGridView"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="{2}"
+          d="M4 6h16M4 10h16M4 14h16M4 18h16"
+        />
+      </svg>
+    </button>
+
+    <!-- Theme Toggle -->
+    <button
+      (click)="onToggleTheme()"
+      class="btn btn-ghost text-gray-700 dark:text-white"
+      [attr.aria-label]="
+        isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'
+      "
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        [class.hidden]="isDarkMode"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="#FFB800"
+        stroke-width="2"
+      >
+        <path
+          d="M12 3v2M12 19v2M19 12h2M3 12h2m13.5-5.5l1.5-1.5M3.5 20.5l1.5-1.5m15 0l-1.5-1.5M5 5l1.5 1.5M12 16a4 4 0 100-8 4 4 0 000 8z"
+        />
+        <circle cx="12" cy="12" r="4" fill="#FFB800" />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        [class.hidden]="!isDarkMode"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="{2}"
+          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+        />
+      </svg>
+    </button>
+
+    <!-- Export/Import -->
+    <button
+      (click)="onExport()"
+      class="inline-flex items-center justify-center rounded-md bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700"
+    >
+      Export
+    </button>
+    <label
+      class="inline-flex items-center justify-center rounded-md bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
+    >
+      Import
+      <input
+        type="file"
+        accept=".csv"
+        class="hidden"
+        (change)="onImport($event)"
+      />
+    </label>
+  </div>
+</div>
