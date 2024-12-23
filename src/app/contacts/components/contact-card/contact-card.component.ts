@@ -1,4 +1,3 @@
-// src/app/contacts/components/contact-card/contact-card.component.ts
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Contact } from '../../models/contact.model';
 import { CommonModule } from '@angular/common';
