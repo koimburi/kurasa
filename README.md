@@ -54,7 +54,7 @@ Kurasa is a user-friendly and feature-rich phonebook application built using Ang
 
 - **Frontend**: Angular
 - **Styling**: Tailwind CSS
-- **Data Storage**: [Mock data / Firebase / Postgres / MySQL] (choose based on your preference)
+- **Data Storage**: [Mock data / Firebase / Postgres / MySQL] 
 - **Local Storage**: For saving user preferences (e.g., homepage view, dark mode).
 
 ## Setup Instructions ⚙️
